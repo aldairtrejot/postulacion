@@ -76,7 +76,7 @@ function iniciarMediosContacto(){
 
 function iniciarMovimiento(){
     buscarMovimiento();//ok
-    //iniciarAdicional();
+    iniciarAdicional();
 }
 
 function iniciarPersonalBancario(){

@@ -126,7 +126,9 @@ if ($id_tbl_empleados_hraes == null) {
                             <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-movimientos"
                                 onclick="iniciarMovimiento();" role="tab" aria-controls="nav-contact"
                                 aria-selected="false"><i class="fa fa-random"></i> Movimientos</a>
-
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-asistencia"
+                                onclick="iniciarProgramas();" role="tab" aria-controls="nav-contact"
+                                aria-selected="false"><i class="fa fa-star"></i> Control y asistencia</a>
                             <!--
 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-programas"
                                 onclick="iniciarProgramas();" role="tab" aria-controls="nav-contact"
@@ -181,6 +183,11 @@ if ($id_tbl_empleados_hraes == null) {
                             <div class="div-spacing"></div>
                             <h5 class="card-title tittle-card-index">Programas</h5>
                             <?php include 'ProgramasM/index.php' ?>
+                        </div>
+                        <div class="tab-pane fade" id="nav-asistencia" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="div-spacing"></div>
+                            <h5 class="card-title tittle-card-index">Control y asistencia</h5>
+                            <?php //include 'ProgramasM/index.php' ?>
                         </div>
                     </div>
                 </div>
