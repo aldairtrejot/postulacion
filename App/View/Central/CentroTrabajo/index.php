@@ -9,7 +9,7 @@
                         <div class="vertical-line"></div>
                     </div>
                     <div class="col padding-left-0">
-                        <h4>IMSS-BIENESTAR CENTRAL</h4>
+                        <h4>POSTULACIÓN</h4>
                     </div>
                 </div>
             </div>

@@ -68,6 +68,7 @@
                         </div>
                     </div>
 
+                    <!--
                     <div class="div-spacing"></div>
                     <div class="row">
                         <div class="col-4">
@@ -92,6 +93,7 @@
                             </fieldset>
                         </div>
                     </div>
+-->
 
 
                     <div class="div-spacing"></div>

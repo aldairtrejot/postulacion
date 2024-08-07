@@ -70,19 +70,18 @@ function iniciarMediosContacto(){
     //mensajetextLar('El usuario debe verificar que todos los campos estén completos, incluyendo el domiclio (código postal fiscal) y la forma de pago (cuenta clabe).');
     buscarNumTelefonico();//ok
     buscarCorreo(); //ok
-    buscarDependiente();//ok
-    buscarEmergencia();//ok
+   // buscarDependiente();//ok
+   // buscarEmergencia();//ok
 }
 
 function iniciarMovimiento(){
     buscarMovimiento();//ok
-   // buscarJefe();
-    iniciarAdicional();
+    //iniciarAdicional();
 }
 
 function iniciarPersonalBancario(){
     buscarFormaPago(); // ok
-    buscarJefe(); //ok
+  //  buscarJefe(); //ok
     iniciarDomicilio(); //ok
     buscarCapacidadesDif();//ok
     buscarLengua();

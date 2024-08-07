@@ -5,7 +5,7 @@
             <div class="card-body">
                 <div class="d-flex align-items-center mb-2">
                     <h3 class="card-title">Centro de trabajo&nbsp;&nbsp;</h3>
-                    <span class="oval-label-central">CENTRAL</span>
+                    <span class="oval-label-central">POSTULACIÓN</span>
                 </div>
                 <div class="row">
                     <div class="col-6">
@@ -52,7 +52,7 @@
             <div class="card-body">
                 <div class="d-flex align-items-center mb-2">
                     <h3 class="card-title">Plazas&nbsp;&nbsp;</h3>
-                    <span class="oval-label-central">CENTRAL</span>
+                    <span class="oval-label-central">POSTULACIÓN</span>
                 </div>
                 <div class="row">
                     <div class="col-6">
@@ -107,7 +107,7 @@
             <div class="card-body">
                 <div class="d-flex align-items-center mb-2">
                     <h3 class="card-title">Empleados&nbsp;&nbsp;</h3>
-                    <span class="oval-label-central">CENTRAL</span>
+                    <span class="oval-label-central">POSTULACIÓN</span>
                 </div>
                 <div class="row">
                     <div class="col-6">

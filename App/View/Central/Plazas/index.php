@@ -18,7 +18,7 @@ if (isset($_POST['id_tbl_centro_trabajo_hraes'])) {
                         <div class="vertical-line"></div>
                     </div>
                     <div class="col padding-left-0">
-                        <h4>IMSS-BIENESTAR CENTRAL</h4>
+                        <h4>POSTULACIÓN</h4>
                     </div>
                     <?php if ($id_tbl_centro_trabajo_hraes != null) { ?>
                         <div class="col-auto">
