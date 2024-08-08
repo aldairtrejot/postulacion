@@ -81,6 +81,7 @@ include '../../../Controllers/Hrae/Catalogos/CatCapacidadC/CatCapacidadC.php';
 
 
 include '../../../Model/Central/FaltaM/FaltaM.php';
+include '../../../Model/Central/AsistenciaM/AsistenciaM.php';
 include '../../../Model/Central/LenguaM/LenguaM.php';
 include '../../../Model/Catalogos/CatLenguaM/CatLenguaM.php';
 include '../../../Model/Central/LicenciasM/LicenciasM.php';

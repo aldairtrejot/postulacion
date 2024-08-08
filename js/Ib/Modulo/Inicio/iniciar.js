@@ -101,6 +101,10 @@ function iniciarPercepciones(){
     buscarQuinquenio();
 }
 
+function iniciarAsistencias(){
+    buscarAsistencia(); //ok
+}
+
 function convertirAMayusculas(event, inputId) {
     let inputElement = document.getElementById(inputId);
     let texto = event.target.value;
