@@ -93,7 +93,7 @@
             <div class="modal-footer">
                 <button onclick="salirAgregarEditarAsistencia();" type="button" class="btn btn-secondary"
                     data-dismiss="modal"><i class="fas fa-times"></i> Cancelar</button>
-                <button type="button" class="btn btn-success save-botton-modal" onclick="return validarLEngua();"><i
+                <button type="button" class="btn btn-success save-botton-modal" onclick="return validarAsistencia();"><i
                         class="fas fa-save"></i> Guardar</button>
                 <input type="hidden" id="id_object">
             </div>

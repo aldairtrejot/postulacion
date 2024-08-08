@@ -37,8 +37,6 @@ function agregarEditarAsistencia(id_object){
         id_object: id_object
     },
         function (data) {
-            console.log(data);
-            
             let jsonData = JSON.parse(data);
             let entity = jsonData.entity; 
 
@@ -65,7 +63,7 @@ function salirAgregarEditarAsistencia(){
 }
 
 
-function guardarLengua() {
+function guardarAsistencia() {
     $.post("../../../../App/Controllers/Central/LenguaC/AgregarEditarC.php", {
         id_object: $("#id_object").val(),
         id_cat_lengua: $("#id_cat_lengua").val(),
