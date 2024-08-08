@@ -10,9 +10,8 @@ $row = new Row();
 if ($id_object != null) {
 
     $entity = $row->returnArray($asistenciaM->listarByEdit($id_object));
-    //$lengua = $catSelectC->selectByEditCatalogo($catLenguaM->listbyAll(),$row->returnArrayById($catLenguaM->listOfId($response['id_cat_lengua'])));
-    $asistencia = $catSelectC->selectByEditCatalogo($asistenciaM->asistencia(),$row->returnArrayById($catLenguaM->listOfId($response['id_cat_lengua'])));
-
+    $asistencia = $catSelectC->selectByEditCatalogo($asistenciaM->asistencia(),$row->returnArrayById($asistenciaM->asistenciaEdit($entity['id_cat_asistencia'])));
+    $estatus = $catSelectC->selectByEditCatalogo($asistenciaM->estatusAsistencia(),$row->returnArrayById($asistenciaM->estatusEdit($entity['id_cat_estatus_asistencia'])));
     $var = [
         'entity' => $entity,
         'asistencia' => $asistencia,

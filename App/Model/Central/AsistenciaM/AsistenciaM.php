@@ -6,7 +6,7 @@ class AsistenciaM
     {
         $listado = pg_query("SELECT 
                                 central.ctrl_asistencia.id_ctrl_asistencia,
-                                TO_CHAR(central.ctrl_asistencia.fecha, 'HH:MI AM'),
+                                TO_CHAR(central.ctrl_asistencia.hora, 'HH:MI AM'),
                                 TO_CHAR(central.ctrl_asistencia.fecha, 'DD-MM-YYYY'),
                                 central.cat_asistencia.nombre,
                                 central.cat_estatus_asistencia.nombre,
@@ -28,7 +28,7 @@ class AsistenciaM
     {
         $listado = pg_query("SELECT 
                                 central.ctrl_asistencia.id_ctrl_asistencia,
-                                TO_CHAR(central.ctrl_asistencia.fecha, 'HH:MI AM'),
+                                TO_CHAR(central.ctrl_asistencia.hora, 'HH:MI AM'),
                                 TO_CHAR(central.ctrl_asistencia.fecha, 'DD-MM-YYYY'),
                                 central.cat_asistencia.nombre,
                                 central.cat_estatus_asistencia.nombre,
@@ -42,7 +42,7 @@ class AsistenciaM
                                     central.cat_estatus_asistencia.id_cat_estatus_asistencia
                             WHERE central.ctrl_asistencia.id_tbl_empleados_hraes = $id_object
                             AND (
-                                TO_CHAR(central.ctrl_asistencia.fecha, 'HH:MI AM')::TEXT LIKE '%$busqueda%' OR
+                                TO_CHAR(central.ctrl_asistencia.hora, 'HH:MI AM')::TEXT LIKE '%$busqueda%' OR
                                 TO_CHAR(central.ctrl_asistencia.fecha, 'DD-MM-YYYY')::TEXT LIKE '%$busqueda%' OR
                                 UPPER(TRIM(UNACCENT(central.cat_asistencia.nombre))) LIKE '%$busqueda%' OR
                                 UPPER(TRIM(UNACCENT(central.cat_estatus_asistencia.nombre))) LIKE '%$busqueda%' OR
