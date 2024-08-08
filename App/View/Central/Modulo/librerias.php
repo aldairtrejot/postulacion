@@ -67,6 +67,7 @@
 
 <script src="../../../../js/Ib/Modulo/Domicilio/Iniciar.js"></script>
 <script src="../../../../js/Ib/Modulo/Domicilio/Validar.js"></script>
+<script src="../../../../js/Ib/Modulo/Domicilio/Agregar.js"></script>
 
 <script src="../../../../js/Ib/Modulo/Movimientos/Iniciar.js"></script>
 <script src="../../../../js/Ib/Modulo/Movimientos/Validar.js"></script>
