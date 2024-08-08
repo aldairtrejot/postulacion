@@ -214,6 +214,35 @@ function convertirAMayusculas(event, inputId) {
   }
 
 
+  function isAsistencia(id_object){
+    Swal.fire({
+        title: "Agregar asistencia",
+        text: "Confirmar el registro de asistencia",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, confirmar",
+        cancelButtonText: "Cancelar",
+        confirmButtonColor: '#235B4E', 
+        cancelButtonColor:'#6c757d',
+      }).then((result) => {
+        if (result.isConfirmed) {
+        $.post("../../../../App/Controllers/Central/AsistenciaC/AsistenciaC.php", {
+            id_object:id_object
+            },
+            function (data) {
+                if (data){
+                    notyf.success('Asistencia registrada con éxito');
+                } else {
+                    notyf.error(mensajeSalida);
+                }
+            }
+        );
+    }
+    });
+  }
+
   function fadeIn(){
     $('#overlay').fadeIn();
   }

@@ -64,26 +64,30 @@ function salirAgregarEditarAsistencia(){
 
 
 function guardarAsistencia() {
-    $.post("../../../../App/Controllers/Central/LenguaC/AgregarEditarC.php", {
+    $.post("../../../../App/Controllers/Central/AsistenciaC/AgregarEditarC.php", {
         id_object: $("#id_object").val(),
-        id_cat_lengua: $("#id_cat_lengua").val(),
+        fecha: $("#fecha_").val(),
+        hora: $("#hora_").val(),
+        id_cat_asistencia: $("#id_cat_asistencia").val(),
+        id_cat_estatus_asistencia: $("#id_cat_estatus_asistencia").val(),
+        observaciones: $("#observaciones_").val(),
         id_tbl_empleados_hraes:id_tbl_empleados_hraes
     },
         function (data) {
-            if (data == 'edit'){
-                notyf.success('Lengua modificada con éxito');
-            } else if (data == 'add') {
-                notyf.success('Lengua agregada con éxito');  
+            if (data == 1){
+                notyf.success('Asistencia modificada con éxito');
+            } else if (data == 2) {
+                notyf.success('Asistencia agregada con éxito');  
             } else {
                 notyf.error(mensajeSalida);
             }
             $("#agregar_editar_asistencia").modal("hide");
-            buscarLengua();
+            buscarAsistencia();
         }
     );
 }
 
-function eliminarLengua(id_object) {//ELIMINAR USUARIO
+function eliminarAsistencia(id_object) {//ELIMINAR USUARIO
     Swal.fire({
         title: "¿Está seguro?",
         text: "¡No podrás revertir esto!",
@@ -97,16 +101,16 @@ function eliminarLengua(id_object) {//ELIMINAR USUARIO
         cancelButtonColor:'#6c757d',
       }).then((result) => {
         if (result.isConfirmed) {
-        $.post("../../../../App/Controllers/Central/LenguaC/EliminarC.php", {
+        $.post("../../../../App/Controllers/Central/AsistenciaC/EliminarC.php", {
                 id_object: id_object
             },
             function (data) {
                 if (data == 'delete'){
-                    notyf.success('Lengua eliminada con éxito')
+                    notyf.success('Asistencia eliminada con éxito')
                 } else {
                     notyf.error(mensajeSalida);
                 }
-                buscarLengua();
+                buscarAsistencia();
             }
         );
     }

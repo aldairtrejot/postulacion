@@ -6,15 +6,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-2">
-                            <img src="../../../../assets/sirh/logo_lengua.png"
+                            <img src="../../../../assets/sirh/logo_asistencia.png"
                                 style="max-width: 350%;margin-top: 20px;">
                         </div>
                         <div class="col-10">
                             <h1 class="text-tittle-card"><label id="titulo_asistencia"></label>
                                 asistencia.
                             </h1>
-                            <p class="color-text-white">Este espacio está destinado para agregar o modificar el idioma
-                                del empleado.</p>
+                            <p class="color-text-white">Espacio para registrar la asistencia de los empleados. En caso
+                                de cumplir o no cumplir con la documentación, seleccione la opción correspondiente en
+                                'Asistencia por Documentos', donde podrá elegir el estatus adecuado y añadir las
+                                observaciones pertinentes.</p>
                         </div>
                     </div>
                 </div>
@@ -32,7 +34,8 @@
                             <div class="line"></div>
                         </div>
                         <div class="col-6">
-                            <label for="campo" class="form-label input-text-form text-input-rem">Hora</label><label class="text-required">*</label>
+                            <label for="campo" class="form-label input-text-form text-input-rem">Hora</label><label
+                                class="text-required">*</label>
                             <input type="time" class="form-control custom-input" id="hora_"
                                 placeholder="Correo electrónico" maxlength="40">
                             <div class="line"></div>
@@ -44,7 +47,8 @@
                         <div class="col-6">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <label for="campo" class="form-label input-text-form text-input-rem">Tipo de asistencia</label>
+                                    <label for="campo" class="form-label input-text-form text-input-rem">Tipo de
+                                        asistencia</label>
                                     <label class="text-required">*</label>
                                 </div>
                             </div>
@@ -61,7 +65,8 @@
                         <div class="col-6">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <label for="campo" class="form-label input-text-form text-input-rem">Estatus de asistencia</label>
+                                    <label for="campo" class="form-label input-text-form text-input-rem">Estatus de
+                                        asistencia</label>
                                     <label class="text-required"></label>
                                 </div>
                             </div>
@@ -80,9 +85,12 @@
                     <div class="div-spacing"></div>
                     <div class="row">
                         <div class="col-12">
-                            <label for="campo" class="form-label input-text-form text-input-rem">Observaciones</label><label class="text-required"></label>
+                            <label for="campo"
+                                class="form-label input-text-form text-input-rem">Observaciones</label><label
+                                class="text-required"></label>
                             <input type="text" class="form-control custom-input" id="observaciones_"
-                                placeholder="Observaciones" maxlength="40">
+                                placeholder="Observaciones" maxlength="40"
+                                onkeyup="convertirAMayusculas(event,'observaciones_')">
                             <div class="line"></div>
                         </div>
                     </div>

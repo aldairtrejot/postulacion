@@ -1,17 +1,17 @@
 <?php
 include '../librerias.php';
 
-$lenguaM = new LenguaM();
+$asistenciaM = new AsistenciaM();
 $bitacoraM = new BitacoraM();
 
 $condicion = [
-    'id_ctrl_lengua' => $_POST['id_object']
+    'id_ctrl_asistencia' => $_POST['id_object']
 ];
 
 if (isset($_POST['id_object'])){
-    if ($lenguaM-> eliminarByArray($connectionDBsPro, $condicion)){
+    if ($asistenciaM-> eliminarByArray($connectionDBsPro, $condicion)){
         $dataBitacora = [
-            'nombre_tabla' => 'central.ctrl_lengua',
+            'nombre_tabla' => 'central.ctrl_asistencia',
             'accion' => 'ELIMINAR',
             'valores' => json_encode($condicion),
             'fecha' => $timestamp,

@@ -92,6 +92,13 @@ class AsistenciaM
         return $pgs_delete;
     }
 
+    public function addOnlyAsist($idEmployee){
+        $isQuery = pg_query("INSERT INTO central.ctrl_asistencia 
+                                        (fecha, hora, id_tbl_empleados_hraes, id_cat_asistencia)
+                                VALUES (CURRENT_DATE, CURRENT_TIME, $idEmployee, 1);");
+        return $isQuery;
+    }
+
 
     ///IS CAT ESTATUS
     public function asistencia(){

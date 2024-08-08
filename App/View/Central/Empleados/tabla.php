@@ -48,6 +48,7 @@ if (pg_num_rows($result) > 0) {
                                         <input type="hidden" name="id_tbl_empleados_hraes" value="' . $row[0]  . '" />
                                         <button onclick="datosEmpleadosGetDetails(' . $row[0]  . ')" class="dropdown-item btn btn-light"><i class="fa fa-folder-open icon-edit-table"></i> Datos complem.</button>  
                                 </form>
+                                <button onclick="isAsistencia(' . $row[0]  . ')" class="dropdown-item btn btn-light"><i class="fa fa-star icon-edit-table"></i> Asistencia</button>  
                                 <button onclick="eliminarEntity(' . $row[0]  . ')" class="dropdown-item btn btn-light"><i class="far fa-trash-alt icon-delete-table"></i> Eliminar</button>  
                             </div>
                           </div>

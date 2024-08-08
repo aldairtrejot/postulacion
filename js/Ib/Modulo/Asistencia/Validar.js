@@ -14,12 +14,10 @@ function validarAsistencia(){
         validarData(id_cat_asistencia,'Tipo de asistencia') 
     ){
         if (id_cat_asistencia == id_cat_asistencia_is_value){
-            console.log('success');
-            //guardarAsistencia();    
+            guardarAsistencia();    
         } else {
             if(validarData(id_cat_estatus_asistencia,'Estatus de asistencia')){
-                console.log('success');
-            //guardarAsistencia();  
+            guardarAsistencia();  
             }
         }
         
