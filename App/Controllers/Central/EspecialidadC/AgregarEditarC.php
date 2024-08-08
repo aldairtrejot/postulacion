@@ -8,10 +8,16 @@ $condicion = [
     'id_ctrl_especialidad_hraes' => $_POST['id_object']
 ];
 
+$nueva_esp = null;
+if($_POST['id_cat_especialidad_hraes'] == 500){
+    $nueva_esp = $_POST['nueva_esp'];
+}
+
 $datos = [
     'id_cat_especialidad_hraes' => $_POST['id_cat_especialidad_hraes'],
     'id_tbl_empleados_hraes' => $_POST['id_tbl_empleados_hraes'],
-    'cedula' => $_POST['cedula']
+    'cedula' => $_POST['cedula'],
+    'nueva_esp' => $nueva_esp
 ];
 
 $var = [

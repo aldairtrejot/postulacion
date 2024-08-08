@@ -48,8 +48,7 @@ class ModelEstudioM
 
     function listarByIdEdit($id_object)
     {
-        $listado = pg_query("SELECT id_ctrl_estudios_hraes, id_tbl_empleados_hraes,
-                                    id_cat_nivel_estudios,id_cat_carrera_hraes, cedula
+        $listado = pg_query("SELECT *
                              FROM central.ctrl_estudios_hraes
                              WHERE id_ctrl_estudios_hraes = $id_object");
         return $listado;

@@ -25,7 +25,7 @@ function iniciarTabla_es(busqueda, paginador, id_tbl_empleados_hraes) {
 
 function agregarEditarEspecialidad(id_object){
     $("#id_object").val(id_object);
-    let titulo = document.getElementById("tituloEspecialidad");
+    let titulo = document.getElementById("tituloEspecialidad_");
     titulo.textContent = 'Modificar';
     $("#id_object").val(id_object);
     if (id_object == null){
@@ -47,6 +47,15 @@ function agregarEditarEspecialidad(id_object){
             $('#id_cat_especialidad_hraes').html(especialidad); 
             $('#id_cat_especialidad_hraes').selectpicker('refresh');
             $('.selectpicker').selectpicker();
+
+            //OCULTA EL CONTENIDO
+            ocultarContenido('is_new_espe');///ocultar
+            if(id_object != null){ //modifica
+                if (response.id_cat_especialidad_hraes == 500){
+                    $('#nueva_esp').val(response.nueva_esp);
+                    mostrarContenido('is_new_espe');
+                }
+            } 
         }
     );
 
@@ -63,6 +72,7 @@ function guardarCedula() {
         id_object: $("#id_object").val(),
         cedula: $("#cedula_espec_").val(),
         id_cat_especialidad_hraes: $("#id_cat_especialidad_hraes").val(),
+        nueva_esp: $("#nueva_esp").val(),
         id_tbl_empleados_hraes:id_tbl_empleados_hraes
     },
         function (data) {

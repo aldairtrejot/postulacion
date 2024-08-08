@@ -65,6 +65,18 @@
                             </div>
                         </div>
 
+                        <div id="is_new_carrera">
+                        <div class="div-spacing"></div>
+                        <div class="col-12">
+                            <label for="campo"
+                                class="form-label input-text-form text-input-rem">Nueva carrera</label><label
+                                class="text-required">*</label>
+                            <input onkeyup="convertirAMayusculas(event,'nueva_carrera')" type="text" id="nueva_carrera" placeholder="Eje: LICENCIATURA EN ...." maxlength="60"
+                                class="form-control custom-input">
+                            <div class="line"></div>
+                        </div>
+                        </div>
+                        
                         <div class="div-spacing"></div>
                         <div class="col-12">
                             <label for="campo"

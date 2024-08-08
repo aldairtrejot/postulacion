@@ -54,6 +54,15 @@ function agregarEditarEstudio(id_object){
             $('#id_cat_nivel_estudios').selectpicker('refresh');
             $('#id_cat_carrera_hraes').selectpicker('refresh');
             $('.selectpicker').selectpicker();
+
+
+            ocultarContenido('is_new_carrera');///ocultar
+            if(id_object != null){ //modifica
+                if (response.id_cat_carrera_hraes == 500){
+                    $('#nueva_carrera').val(response.nueva_carrera);
+                    mostrarContenido('is_new_carrera');
+                }
+            } 
         }
     );
 
@@ -71,6 +80,7 @@ function guardarEstudio() {
         id_cat_carrera_hraes: $("#id_cat_carrera_hraes").val(),
         id_cat_nivel_estudios: $("#id_cat_nivel_estudios").val(),
         cedula: $("#cedula_es_").val(),
+        nueva_carrera: $("#nueva_carrera").val(),
         id_tbl_empleados_hraes:id_tbl_empleados_hraes
     },
         function (data) {

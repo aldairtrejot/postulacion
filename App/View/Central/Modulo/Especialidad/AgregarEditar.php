@@ -10,7 +10,7 @@
                                 style="max-width: 250%;margin-top: 20px;">
                         </div>
                         <div class="col-10">
-                            <h1 class="text-tittle-card"><label id="tituloEspecialidad"></label>
+                            <h1 class="text-tittle-card"><label id="tituloEspecialidad_"></label>
                                 especialidad.
                             </h1>
                             <p class="color-text-white">Este espacio está destinado a registrar la especialidad del
@@ -44,6 +44,18 @@
                             </div>
                         </div>
 
+                        <div id="is_new_espe">
+                        <div class="div-spacing"></div>
+                        <div class="col-12">
+                            <label for="campo"
+                                class="form-label input-text-form text-input-rem">Nueva especialidad</label><label
+                                class="text-required">*</label>
+                            <input onkeyup="convertirAMayusculas(event,'nueva_esp')" type="text" id="nueva_esp" placeholder="Eje: ESPECIALIAD EN ..." maxlength="60"
+                                class="form-control custom-input">
+                            <div class="line"></div>
+                        </div>
+                        </div>
+                        
                         <div class="div-spacing"></div>
                         <div class="col-12">
                             <label for="campo"
