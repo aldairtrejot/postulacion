@@ -24,6 +24,13 @@
             <div class="div-spacing"></div>
             <div class="card-body">
                 <div class="container">
+
+                    <div class="alert alert-warning" role="alert">
+                        Para registrar una especialidad que no se encuentra en el catálogo 'SELECCIONE ESPECIALIDAD', selecciona
+                        la opción 'AGREGAR ESPECIALIDAD' dentro de dicho catálogo. Esto habilitará un campo donde podrás
+                        ingresar la nueva especialidad.
+                    </div>
+
                     <div class="row mx-1">
                         <div class="col-12">
                             <div class="row">
@@ -45,17 +52,17 @@
                         </div>
 
                         <div id="is_new_espe">
-                        <div class="div-spacing"></div>
-                        <div class="col-12">
-                            <label for="campo"
-                                class="form-label input-text-form text-input-rem">Nueva especialidad</label><label
-                                class="text-required">*</label>
-                            <input onkeyup="convertirAMayusculas(event,'nueva_esp')" type="text" id="nueva_esp" placeholder="Eje: ESPECIALIAD EN ..." maxlength="60"
-                                class="form-control custom-input">
-                            <div class="line"></div>
+                            <div class="div-spacing"></div>
+                            <div class="col-12">
+                                <label for="campo" class="form-label input-text-form text-input-rem">Nueva
+                                    especialidad</label><label class="text-required">*</label>
+                                <input onkeyup="convertirAMayusculas(event,'nueva_esp')" type="text" id="nueva_esp"
+                                    placeholder="Eje: ESPECIALIAD EN ..." maxlength="60"
+                                    class="form-control custom-input">
+                                <div class="line"></div>
+                            </div>
                         </div>
-                        </div>
-                        
+
                         <div class="div-spacing"></div>
                         <div class="col-12">
                             <label for="campo"

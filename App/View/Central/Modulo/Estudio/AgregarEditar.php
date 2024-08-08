@@ -25,6 +25,14 @@
             <div class="div-spacing"></div>
             <div class="card-body">
                 <div class="container">
+
+                    <div class="alert alert-warning" role="alert">
+                        Para registrar una carrera que no se encuentra en el catálogo 'SELECCIONE CARRERA', selecciona
+                        la opción 'AGREGAR CARRERA' dentro de dicho catálogo. Esto habilitará un campo donde podrás
+                        ingresar la nueva carrera.
+                    </div>
+
+
                     <div class="row mx-1">
                         <div class="col-12">
                             <div class="row">
@@ -66,17 +74,17 @@
                         </div>
 
                         <div id="is_new_carrera">
-                        <div class="div-spacing"></div>
-                        <div class="col-12">
-                            <label for="campo"
-                                class="form-label input-text-form text-input-rem">Nueva carrera</label><label
-                                class="text-required">*</label>
-                            <input onkeyup="convertirAMayusculas(event,'nueva_carrera')" type="text" id="nueva_carrera" placeholder="Eje: LICENCIATURA EN ...." maxlength="60"
-                                class="form-control custom-input">
-                            <div class="line"></div>
+                            <div class="div-spacing"></div>
+                            <div class="col-12">
+                                <label for="campo" class="form-label input-text-form text-input-rem">Nueva
+                                    carrera</label><label class="text-required">*</label>
+                                <input onkeyup="convertirAMayusculas(event,'nueva_carrera')" type="text"
+                                    id="nueva_carrera" placeholder="Eje: LICENCIATURA EN ...." maxlength="60"
+                                    class="form-control custom-input">
+                                <div class="line"></div>
+                            </div>
                         </div>
-                        </div>
-                        
+
                         <div class="div-spacing"></div>
                         <div class="col-12">
                             <label for="campo"

@@ -23,6 +23,14 @@
             <div class="card-body">
                 <div class="container">
 
+                    <div class="alert alert-warning" role="alert">
+                        Agrega un nuevo domicilio que no esté registrado en el sistema completando los campos
+                        requeridos. En los campos de entidad y municipio aparecerá la leyenda 'GENÉRICO'. Ten en cuenta
+                        que, para corregir un domicilio agregado mediante este proceso, es necesario registrar el
+                        domicilio nuevamente. El sistema eliminará automáticamente el domicilio anterior asignado al
+                        empleado para permitir el registro del nuevo.
+                    </div>
+
                     <div class="row">
                         <div class="col-6">
                             <label for="campo" class="text-input-rem form-label input-text-form">C&oacutedigo
@@ -44,16 +52,17 @@
                     <div class="div-spacing"></div>
                     <div class="row">
                         <div class="col-6">
-                            <label for="campo" class="form-label input-text-form text-input-rem">Colonia</label><label class="text-required">*</label>
-                            <input onkeyup="convertirAMayusculas(event,'is_colonia')" maxlength="50" type="text"
+                            <label for="campo" class="form-label input-text-form text-input-rem">Colonia</label><label
+                                class="text-required">*</label>
+                            <input onkeyup="convertirAMayusculas(event,'is_colonia')" maxlength="60" type="text"
                                 class="form-control div-spacing custom-input" id="is_colonia" placeholder="Colonia">
                             <div class="line"></div>
                         </div>
                         <div class="col-6">
-                            <label for="campo" class="form-label input-text-form text-input-rem">Calle</label><label class="text-required">*</label>
-                            <input onkeyup="convertirAMayusculas(event,'is_calle')" maxlength="50" type="text"
-                                class="form-control div-spacing custom-input" id="is_calle"
-                                placeholder="Calle">
+                            <label for="campo" class="form-label input-text-form text-input-rem">Calle</label><label
+                                class="text-required">*</label>
+                            <input onkeyup="convertirAMayusculas(event,'is_calle')" maxlength="60" type="text"
+                                class="form-control div-spacing custom-input" id="is_calle" placeholder="Calle">
                             <div class="line"></div>
                         </div>
                     </div>
@@ -61,13 +70,16 @@
                     <div class="div-spacing"></div>
                     <div class="row">
                         <div class="col-6">
-                            <label for="campo" class="form-label input-text-form text-input-rem">N&uacutem. Exterior</label><label class="text-required">*</label>
+                            <label for="campo" class="form-label input-text-form text-input-rem">N&uacutem.
+                                Exterior</label><label class="text-required">*</label>
                             <input onkeyup="convertirAMayusculas(event,'is_num_exterior')" maxlength="20" type="text"
-                                class="form-control div-spacing custom-input" id="is_num_exterior" placeholder="Núm exterior">
+                                class="form-control div-spacing custom-input" id="is_num_exterior"
+                                placeholder="Núm exterior">
                             <div class="line"></div>
                         </div>
                         <div class="col-6">
-                            <label for="campo" class="form-label input-text-form text-input-rem">N&uacutem. Interior</label><label class="text-required">*</label>
+                            <label for="campo" class="form-label input-text-form text-input-rem">N&uacutem.
+                                Interior</label><label class="text-required">*</label>
                             <input onkeyup="convertirAMayusculas(event,'is_num_interior')" maxlength="20" type="text"
                                 class="form-control div-spacing custom-input" id="is_num_interior"
                                 placeholder="Núm interior">
@@ -82,8 +94,8 @@
             <div class="modal-footer">
                 <button onclick="closeDomicilio();" type="button" class="btn btn-secondary" data-dismiss="modal"><i
                         class="fas fa-times"></i> Cancelar</button>
-                <button type="button" class="btn btn-success save-botton-modal" onclick="return isValidarDomicilio();"><i
-                        class="fas fa-save"></i> Guardar</button>
+                <button type="button" class="btn btn-success save-botton-modal"
+                    onclick="return isValidarDomicilio();"><i class="fas fa-save"></i> Guardar</button>
                 <input type="hidden" id="id_object">
             </div>
         </div>
