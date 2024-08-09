@@ -23,7 +23,7 @@ function validar(){
         validarData(id_cat_unidad,'Unidad administrativa') &&
         validarData(id_cat_coordinacion,'Coordinación') &&
         validarData(fecha_ingreso_inst,'Fecha de ingreso OPD') &&
-        caracteresCount('Número de plaza',8,num_plaza)
+        caracteresCount('Número de plaza',25,num_plaza)
     ){
         if (id_object.length === 0){
             agregarEditarByDb();

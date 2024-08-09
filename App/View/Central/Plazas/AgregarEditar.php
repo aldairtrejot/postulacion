@@ -65,7 +65,7 @@
                             <fieldset disabled id="checkbox_disabled_num_plaza" data-toggle="tooltip" data-placement="top">
                                 <label for="campo" class="form-label input-text-form">N&uacutemero de
                                     plaza</label><label class="text-required">*</label>
-                                <input minlength="7" type="number" class="form-control custom-input" id="num_plaza"
+                                <input minlength="7" type="text" class="form-control custom-input" id="num_plaza"
                                     placeholder="Número de plaza" oninput="validarNumero(this)">
                                 <div class="line"></div>
                             </fieldset>

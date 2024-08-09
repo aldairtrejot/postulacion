@@ -28,14 +28,47 @@ $id_object = $_POST['id_object'];
 if ($id_object != null){
 
     $entity = $row->returnArray($modelPlazasHraes -> listarByIdEdit($id_object));
-    $niveles = $row->returnArrayById($catalogoPuestoM->nameOfPuesto($entity['id_cat_puesto_hraes']));
-    $plazas = $catalogoPlazasC ->returnCatPLazasByIdObject($catalogoPlazasM ->listarByAll(), $row->returnArrayById($catalogoPlazasM ->obtenerElemetoById($entity['id_cat_tipo_plazas'])));
-    $contratacion = $catalogoTipoContratcionHraesC ->returnCatContratacionByIdObject($catalogoTipoContratacionM ->listarByAll(),$row->returnArrayById($catalogoTipoContratacionM ->obtenerElemetoById($entity['id_cat_tipo_subtipo_contratacion_hraes'])));
-    $unidadResp = $catalogoUnidadResponsableC ->returnCatUnidadByIdObject($cataloUnidadResposableM->listarByAll(), $row->returnArrayById($cataloUnidadResposableM->obtenerElemetoById($entity['id_cat_unidad_responsable'])));
+    
+    $niveles = $catalogoNivelesC->returnSelect($catalogoNivelesM->listarByAll());
+    if($entity['id_cat_puesto_hraes'] != ''){
+        $niveles = $row->returnArrayById($catalogoPuestoM->nameOfPuesto($entity['id_cat_puesto_hraes']));
+    }
+
+    $plazas = $catalogoPlazasC -> returnCatPlazas($catalogoPlazasM->listarByAll());
+    if($entity['id_cat_tipo_plazas'] != ''){
+        $plazas = $catalogoPlazasC ->returnCatPLazasByIdObject($catalogoPlazasM ->listarByAll(), $row->returnArrayById($catalogoPlazasM ->obtenerElemetoById($entity['id_cat_tipo_plazas'])));
+    }
+
+    $contratacion = $catalogoTipoContratcionHraesC -> returnCatContratacion($catalogoTipoContratacionM->listarByAll());
+    if($entity['id_cat_tipo_subtipo_contratacion_hraes'] != ''){
+        $contratacion = $catalogoTipoContratcionHraesC ->returnCatContratacionByIdObject($catalogoTipoContratacionM ->listarByAll(),$row->returnArrayById($catalogoTipoContratacionM ->obtenerElemetoById($entity['id_cat_tipo_subtipo_contratacion_hraes'])));
+    }
+    
+    $unidadResp = $catalogoUnidadResponsableC ->returnCatUnidad($cataloUnidadResposableM ->listarByAll());
+    if($entity['id_cat_unidad_responsable'] != ''){
+        $unidadResp = $catalogoUnidadResponsableC ->returnCatUnidadByIdObject($cataloUnidadResposableM->listarByAll(), $row->returnArrayById($cataloUnidadResposableM->obtenerElemetoById($entity['id_cat_unidad_responsable'])));
+    }
+   
+    $tabulares = $catalogoTabularesC->returnSelect($catalogoTabularesM->listarByAll());
+   if($entity['id_cat_zonas_tabuladores_hraes'] != ''){
     $tabulares = $catalogoTabularesC->returnSelectByIdObject($catalogoTabularesM->listarByAll(),$row->returnArrayById($catalogoTabularesM->obtenerElemetoById($entity['id_cat_zonas_tabuladores_hraes'])));
+   }
+
+   $unidadAdmin = $catSelectC->selectByAllCatalogo($catUnidadAdM->lisOfCatUnidad());
+   if($entity['id_cat_unidad'] != ''){
     $unidadAdmin = $catSelectC->selectByEditCatalogo($catUnidadAdM->lisOfCatUnidad(), $row->returnArrayById($catUnidadAdM->editOfCatUnidad($entity['id_cat_unidad'])));
+   }
+    
+   $unidadCoor = $catSelectC->selectByAllCatalogo($catUnidadAdM->listOfCatCoordinacion());
+   if($entity['id_cat_coordinacion'] != ''){
     $unidadCoor = $catSelectC->selectByEditCatalogo($catUnidadAdM->listOfCatCoordinacion(), $row->returnArrayById($catUnidadAdM->editOfCatCoordinacion($entity['id_cat_coordinacion'])));
+   }
+
     $isValueAux = $row->returnArrayById($catalogoPuestoM->getEditCatAux($entity['id_cat_aux_puesto']));
+
+    
+    
+    
     $nomEspecifico = $catSelectC->selectByEditCatalogo($catalogoPuestoM->listOfSpecificName($isValueAux[1]), $row->returnArrayById($catalogoPuestoM->editSpecificName($isValueAux[2])));
     $puestoCategoria = $catSelectC->selectByEditCatalogo($catalogoPuestoM->listOfCategoName($isValueAux[1],$isValueAux[2]), $row->returnArrayById($catalogoPuestoM->editCatName($isValueAux[3])));
     $puesto = $catSelectC->selectByEditCatalogo($catalogoPuestoM->listarByAllPuesto(),$row->returnArrayById($catalogoPuestoM->editByAllPuesto($isValueAux[1])));
