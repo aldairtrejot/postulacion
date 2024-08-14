@@ -105,7 +105,7 @@ $id_rol = $_SESSION['id_rol'];
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle nav-text-tittle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Nom. Central
+                                Postulaci&oacuten
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="../../Central/CentroTrabajo/index.php">Centro de
