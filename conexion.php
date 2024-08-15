@@ -1,7 +1,7 @@
 <?php
 $password = "pg2024";
 $username = "postgres";
-$dbname = "postulacion_produccion";
+$dbname = "postulacion_produccion_v1";
 $host = "localhost";
 $port = "5432";
 $options = "--client_encoding=UTF8";
