@@ -122,13 +122,16 @@ if ($id_tbl_empleados_hraes == null) {
                             <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-escolaridad"
                                 onclick="iniciarEscolaridad();" role="tab" aria-controls="nav-contact"
                                 aria-selected="false"><i class="fa fa-graduation-cap"></i> Escolaridad</a>
-                            
 
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#is_nav_asistencias"
-                                onclick="iniciarAsistencias();" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fa fa-star"></i>
+
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+                                href="#is_nav_asistencias" onclick="iniciarAsistencias();" role="tab"
+                                aria-controls="nav-contact" aria-selected="false"><i class="fa fa-star"></i>
                                 Control y asistencia</a>
 
-                               
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-movimientos"
+                                onclick="iniciarMovimiento();" role="tab" aria-controls="nav-contact"
+                                aria-selected="false"><i class="fa fa-random"></i> Movimientos</a>
 
                             <!--
 
