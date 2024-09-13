@@ -130,7 +130,10 @@ if ($id_tbl_empleados_hraes == null) {
                                 Control y asistencia</a>
 
 
-                           
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-movimientos"
+                                onclick="iniciarMovimiento();" role="tab" aria-controls="nav-contact"
+                                aria-selected="false"><i class="fa fa-random"></i> Movimientos</a>
+
 
                             <!--
 
